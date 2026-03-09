@@ -1,0 +1,5 @@
+flask
+edge-tts
+gunicorn
+python-docx
+PyPDF2
