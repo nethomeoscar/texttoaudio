@@ -11,14 +11,20 @@
     </script>
     <style>
         body {
-            background-color: #FCFFFF;
+            background-color: #FFFFFF;
             color: #000;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+	.titulo-gradiente {
+	    background: linear-gradient(90deg, #ff6f61, #6a5acd); /* Colores del gradiente */
+	    -webkit-background-clip: text;   /* Aplica el gradiente al texto */
+	    -webkit-text-fill-color: transparent; /* Hace que el texto sea transparente para mostrar el gradiente */
+	    font-weight: bold; /* Opcional: resalta más el título */
+	}
         .card {
             border-radius: 15px;
-            background-color: #E7F9FE;
-            border: 1px solid #333;
+            background-color: #F9F5F2;
+            border: 1px solid #DDDDDD;
         }
         .btn-toggle {
             transition: all 0.3s ease;
@@ -27,18 +33,18 @@
             letter-spacing: 1px;
         }
         .form-control, .form-select {
-            background-color: #FCFFFF;
-            border: 1px solid #444;
-            color: white;
+            background-color: #FFFFFF;
+            border: 1px solid #DDDDDD;
+            color: #313131;
         }
         .form-control:focus, .form-select:focus {
-            background-color: #fff;
-            color: white;
-            border-color: #0dcaf0;
+            background-color: #FFFFFF;
+            color: #313131;
+            border-color: #313131;
             box-shadow: none;
         }
         #playerContainer {
-            border-top: 1px solid #333;
+            border-top: 1px solid #F7F7F7;
             margin-top: 20px;
             padding-top: 20px;
         }
@@ -53,9 +59,9 @@
             margin-bottom: 1rem;
         }
         .file-upload-wrapper label {
-            background-color: #004949;
-            border: 1px solid #444;
-            color: #e0e0e0;
+            background-color: #F7F7F7;
+            border: 1px solid #DDD;
+            color: #313131;
             padding: 0.5rem 1rem;
             border-radius: 8px;
             cursor: pointer;
@@ -65,7 +71,7 @@
             transition: background-color 0.2s;
         }
         .file-upload-wrapper label:hover {
-            background-color: #007979;
+            background-color: #DDDDDD;
         }
         .file-upload-wrapper input[type="file"] {
             display: none;
@@ -95,9 +101,9 @@
         <div class="col-md-8 col-lg-6">
             <div class="card shadow-lg">
                 <div class="card-body p-4">
-                    <h3 class="text-center mb-4 text-info">
-                        <i class="fas fa-wave-square me-2"></i>Texto a Voz
-                    </h3>
+                    <h3 class="text-center mb-4 titulo-gradiente">
+  			<i class="fas fa-microphone-alt"></i> Texto a Voz
+		    </h3>
 
                     <!-- Área de texto -->
                     <div class="mb-3">
