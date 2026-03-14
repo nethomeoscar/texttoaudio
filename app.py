@@ -14,7 +14,24 @@ app.secret_key = os.environ.get('SECRET_KEY', 'clave-por-defecto-solo-desarrollo
 
 @app.route('/sitemap.xml')
 def sitemap():
-    return send_from_directory('static', 'sitemap.xml', mimetype='application/xml')
+    urls = [
+        {"loc": f"https://{request.host}/", "lastmod": datetime.now().date().isoformat(), "priority": "1.0"},
+        # Agrega más URLs si las tienes
+    ]
+    
+    xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    for url in urls:
+        xml += f'''
+  <url>
+    <loc>{url['loc']}</loc>
+    <lastmod>{url['lastmod']}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>{url['priority']}</priority>
+  </url>\n'''
+    xml += '</urlset>'
+    
+    return Response(xml, mimetype='application/xml')
 
 # Cargar traducciones disponibles
 TRANSLATIONS_DIR = os.path.join(app.root_path, 'translations')
