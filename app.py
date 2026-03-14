@@ -12,6 +12,10 @@ import json
 app = Flask(__name__)
 app.secret_key = os.environ.get('SECRET_KEY', 'clave-por-defecto-solo-desarrollo')
 
+@app.route('/sitemap.xml')
+def sitemap():
+    return send_from_directory('static', 'sitemap.xml', mimetype='application/xml')
+
 # Cargar traducciones disponibles
 TRANSLATIONS_DIR = os.path.join(app.root_path, 'translations')
 TRANSLATIONS = {}
