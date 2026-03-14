@@ -10,7 +10,7 @@ import tempfile
 import json
 
 app = Flask(__name__)
-app.secret_key = 'a1b2c3d4e5f6789012345678abcdef90'
+app.secret_key = os.environ.get('SECRET_KEY', 'clave-por-defecto-solo-desarrollo')
 
 # Cargar traducciones disponibles
 TRANSLATIONS_DIR = os.path.join(app.root_path, 'translations')
