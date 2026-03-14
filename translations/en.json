@@ -1,0 +1,17 @@
+{
+    "app_title": "Text to Audio MP3",
+    "your_message": "Your message:",
+    "placeholder": "Write or paste the text you want to convert",
+    "fileUpload": "Upload file (TXT, PDF, DOCX)",
+    "fileName": "No file selected",
+    "voice_language": "Voice / Language:",
+    "speed": "Speed:",
+    "normal": "Normal",
+    "generate_play": "GENERATE & PLAY",
+    "download": "DOWNLOAD MP3",
+    "footer": "Powered by Python & Edge TTS",
+    "error_no_text": "Please enter some text first.",
+    "error_generating": "Error generating audio.",
+    "donateButton": "Donate via PayPal",
+    "support": "Support the development of this tool"
+}
